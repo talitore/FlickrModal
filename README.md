@@ -34,7 +34,7 @@ Thanks for participating in this Credentials alpha test! Instructions:
 * the real problem here is that, when you do something like so:
 
 ```javascript
-$('.some-element-class).click(function(e) {
+$('.some-element-class').click(function(e) {
     // stuff here
 });
 ```
