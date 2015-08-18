@@ -16,7 +16,7 @@
 
         var val;
         if ( e.type === 'keypress' && e.keyCode === 13 ) {
-            val = $( this ).val(); 
+            val = $( this ).val();
         }
         else if ( e.type === 'keypress' && e.keyCode !== 13 ) {
             return;
@@ -52,5 +52,5 @@
     $('.js-search').keypress( onSubmit );
 
     // write your event handler in the lines below
-    
+    window.run_solution(searchHandler, modal, onSubmit, onClear, showModal);
 })();

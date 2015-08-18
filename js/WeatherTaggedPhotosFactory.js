@@ -82,7 +82,8 @@ var WeatherTaggedPhotosFactory = (function( WeatherAPI, FlickrAPI ) {
             .then( dataToURL )
             .then( function( data ) {
 
-                var cols = [];
+                var cols = [],
+                    batch = window.search_id;
                 cols[0] = $('<div/>');
                 cols[1] = $('<div/>');
 
@@ -106,7 +107,9 @@ var WeatherTaggedPhotosFactory = (function( WeatherAPI, FlickrAPI ) {
                         $div.append( $img );
                         $img
                             .hide()
-                            .fadeIn( 'slow' );
+                            .fadeIn( 'slow', function () {
+                        window.notify_test($img, batch);
+                            });
 
                     } // onload
                     img.src = el;
