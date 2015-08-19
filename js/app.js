@@ -52,5 +52,11 @@
     $('.js-search').keypress( onSubmit );
 
     // write your event handler in the lines below
-    
+
+    function revealImageModal( e ) {
+      var $clickedImage = $(e.currentTarget).find('img');
+      showModal($clickedImage);
+    }
+
+    $('#photos').on('click', '.weather-factory-item', revealImageModal);
 })();
